@@ -12,13 +12,11 @@ function createWindow() {
     nodeIntegration: false,
     preload: __dirname + '/preload.js'
   } });
-  // mainWindow.loadURL(
-  //   isDev
-  //     ? "http://localhost:3000"
-  //     : `file://${path.join(__dirname, "../build/index.html")}`
-  // );
-  // mainWindow.loadURL("http://www.google.com");
-  mainWindow.loadURL("http://localhost:8080");
+  mainWindow.loadURL(
+    isDev
+      ? "http://localhost:8080"
+      : `file://${path.join(__dirname, "../build/index.html")}`
+  );
   mainWindow.on("closed", () => (mainWindow = null));
 }
 
