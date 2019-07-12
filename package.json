@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "./electron.js",
+  "homepage": "./",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-dev": "webpack-dev-server",
-    "compile": "electron-webpack",
-    "dist": "yarn compile && electron-builder",
+    "compile": "build --c.extraMetadata.main=electron.js",
+    "dist": "webpack && yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
     "electron-dev": "concurrently \"npm run webpack-dev\" \"wait-on http://localhost:8080 && npm run electron\"",
-    "electron": "electron ."
+    "electron": "electron .",
+    "webpack": "webpack"
   },
   "author": "",
   "license": "ISC",
