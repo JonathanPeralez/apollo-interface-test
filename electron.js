@@ -8,14 +8,16 @@ const isDev = require("electron-is-dev");
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({ width: 900, height: 680, webPreferences: {
-    nodeIntegration: false,
-    preload: __dirname + '/preload.js'
-  } });
+  mainWindow = new BrowserWindow({
+    width: 900, height: 680, webPreferences: {
+      nodeIntegration: false,
+      preload: __dirname + '/preload.js'
+    }
+  });
   mainWindow.loadURL(
     isDev
       ? "http://localhost:8080"
-      : `file://${path.join(__dirname, "../build/index.html")}`
+      : `file://${path.join(__dirname, "./index.html")}`
   );
   mainWindow.on("closed", () => (mainWindow = null));
 }

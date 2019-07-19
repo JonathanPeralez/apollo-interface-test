@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './header';
 import SidebarContainer from './sidebarContainer';
 import MainContainer from './mainContainer';
@@ -8,10 +8,10 @@ import Footer from './footer';
 const App = () => (
   <Router>
     <div>
-      <Header/>
+      <Header />
       <div className="content-container">
-        <SidebarContainer/>
-        <MainContainer/>
+        <SidebarContainer />
+        <MainContainer />
       </div>
     </div>
   </Router>

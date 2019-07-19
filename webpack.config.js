@@ -3,10 +3,9 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './index.js',
-  mode: 'development',
   devServer: {
     hot: true,
-    publicPath: '/build/',
+    publicPath: '',
     proxy: {
       '/api': 'http://localhost:3000',
     },
@@ -27,7 +26,7 @@ module.exports = {
     }]
   },
   output: {
-    path: path.resolve(__dirname, 'react', 'build'),
+    path: path.resolve(__dirname),
     filename: 'bundle.js'
   },
   plugins: [
