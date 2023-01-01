@@ -20,10 +20,10 @@
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.3.0",
     "electron": "^5.0.6",
     "electron-builder": "^20.44.4",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
@@ -37,6 +37,6 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "wait-on": "^3.2.0",
-    "webpack": "^4.35.3"
+    "webpack": "^5.75.0"
   }
 }
